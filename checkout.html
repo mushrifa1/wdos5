@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="checkout.css">
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <p class="logo">CHECKOUT PAGE</p>
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+    </div>
+    <div class="container">
+        <div class="cart-summary">
+            <div class="head"><p>Order Summary</p></div>
+            <table id="checkoutTable">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="checkoutItems">
+                    <tr>
+                        <td class="image-column"><img src="image-url.jpg" alt="Product Image"></td>
+                        <td class="title-column">Product Title</td>
+                        <td class="price-column">$ 0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="foot">
+                <h3>Total</h3>
+                <h2 id="checkoutTotal">$ 0.00</h2>
+            </div>
+        </div>
+
+        <div class="checkout-form">
+            <div class="form-head"><p>Shipping Details</p></div>
+            <form id="form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+
+                <label for="phone">Phone number:</label>
+                <input type="text" id="phone" required>
+                
+                <label for="city">City:</label>
+                <input type="text" id="city" required>
+                
+                <label for="zip">ZIP Code:</label>
+                <input type="text" id="zip" required>
+
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+                
+                <button type="submit">Complete Purchase</button>
+            </form>
+        </div>
+    </div>
+    <div id="thankYouMessage" style="display: none;">
+        <h2>Thank you for your purchase!</h2>
+        <p>Your order will be delivered on <span id="deliveryDate"></span>.</p>
+    </div>
+    <script src="checkout.js"></script>
+</body>
+</html>
